@@ -3,9 +3,9 @@ const db = require("../config/db");
 
 const router = express.Router();
 
-// Get all movies
+// get all users
 router.get("/", (req, res) => {
-    const query = "SELECT * FROM movies";
+    const query = "SELECT * FROM users";
     db.query(query, (err, results) => {
         if (err) {
             return res.status(500).json({ error: err.message });
@@ -13,7 +13,5 @@ router.get("/", (req, res) => {
         res.json(results);
     });
 });
-
-
 
 module.exports = router;
