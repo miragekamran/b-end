@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 app.use("/movies", moviesRoutes);
 app.use("/users", userRoutes);
 
-// Start the server
+// Start the server locally
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });
